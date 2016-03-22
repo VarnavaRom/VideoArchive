@@ -29,7 +29,7 @@ Git
 
 Добавление нового удалённого репозитория:
 
-	git remote add origin git@ovt.mziorb.ru:socol_rb/sokol_dev.git
+	git remote add origin git@git@github.com:VarnavaRom/VideoArchive.git
 
 Показать и удаленно отслеживаемые, и локальные ветки:
 
