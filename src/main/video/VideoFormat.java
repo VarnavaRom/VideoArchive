@@ -5,16 +5,23 @@
  */
 package main.video;
 
+import java.util.ArrayList;
+import java.util.List;
+import main.Obserever;
+import main.Observerable;
+
 /**
  *  Класс представляет собой воплощение видеоформата
  * @author ivan
  */
-public abstract class VideoFormat {
+public abstract class VideoFormat implements Observerable{
+    
+    List<Obserever> observers = new ArrayList<>();;
     
     /**Обязательно используй этот конструктор дабы инициализировать
      * массив разрешений экрана*/
     public VideoFormat(){
-    
+       
     }
     
     /**Предопределенные форматы для которых мы должны рассчитывать все*/
@@ -43,6 +50,16 @@ public abstract class VideoFormat {
     
     /**Необходимая общая пропускная способность*/
     protected String[] requiredTotalBandwidth = {"",""};
+
+    @Override
+    public void registerObserver(Obserever o) {
+       observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Obserever o) {
+        observers.remove(o);
+    }
    
     
     
