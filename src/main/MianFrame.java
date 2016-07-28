@@ -5,6 +5,10 @@
  */
 package main;
 
+import calculate.Calculator;
+import main.error.CalculatedArgumentException;
+import main.video.VideoFormat;
+
 /**
  *
  * @author ivan
@@ -13,6 +17,7 @@ public class MianFrame extends javax.swing.JFrame {
     
     String[] cadrInSecond = new String[30];
     String[] hours = new String[24];
+    Calculator calculator;
 
     /**
      * Creates new form MianFrame
@@ -25,7 +30,7 @@ public class MianFrame extends javax.swing.JFrame {
             hours[i]=""+(i+1);
         }
         init();
-        
+        calculator = new Calculator();
     }
 
     /**
@@ -171,6 +176,11 @@ public class MianFrame extends javax.swing.JFrame {
         jLabel14.setText("Необходимый объем памяти жесткого диска:");
 
         jButton1.setText("Итог");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -339,6 +349,16 @@ public class MianFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        try {
+            calculator.calc(new VideoFormat() {
+            });
+        }catch(CalculatedArgumentException exception){
+        
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     public void init(){
