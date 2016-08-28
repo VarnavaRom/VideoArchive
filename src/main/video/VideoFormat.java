@@ -5,8 +5,6 @@
  */
 package main.video;
 
-import javax.swing.JRadioButton;
-
 /**
  *  Класс представляет собой воплощение видеоформата
  * @author ivan
@@ -31,7 +29,10 @@ public class VideoFormat{
     private int cboHoursPerDay;
     
     //Пропускная способность 1 камеры
-    private Object[] camBandwidth;
+    private String[] camBandwidth = {
+			"0",
+                        "кб/c"
+			};
     
     
     //Обновляем значение compressionFormat
@@ -185,17 +186,18 @@ public class VideoFormat{
 
     float tCam = averageFrameSize * 12 * cboHoursPerDay / frt;
     if(tCam > 999){
-        camBandwidth[0] = tCam / 1000;
+        camBandwidth[0] = Float.toString(tCam / 1000);
         camBandwidth[1] = "Мб/с";
     }
     else{
-        camBandwidth[0] = tCam;
+        camBandwidth[0] = Float.toString(tCam);
         camBandwidth[1] = "Кб/с";
     }
 }
     //Возврощаем значение пропускной способности камеры
-    public Object[] getBandwidth(){
+    public String[] getBandwidth(){
         calcBandwidth();
+        camBandwidth[0].format("%.2f\n", Float.parseFloat(camBandwidth[0]));
         return camBandwidth;
     }
 
