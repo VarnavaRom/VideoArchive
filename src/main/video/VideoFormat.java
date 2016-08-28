@@ -27,6 +27,12 @@ public class VideoFormat{
     /**Необходимая пропускная способность для 1 камеры*/
     private String requiredSingleBandwidth = "";
     
+    //Обновляем значение compressionFormat
+    public void setCompressionFormat(String compressionFormat)
+    {
+      this.compressionFormat = compressionFormat;  
+    }
+    
   private void imageSize(){
     switch(ScreenResolution){
         case 1:
