@@ -176,12 +176,12 @@ public class VideoFormat{
     }    
     
     //Изменяем значение numCams
-    private void setNumCams(int numCams){
+    public void setNumCams(int numCams){
         this.numCams = numCams;
     }
     
     //Изменяем значение cboHoursPerDay
-    private void setCboHoursPerDay(int cboHoursPerDay){
+    public void setCboHoursPerDay(int cboHoursPerDay){
         this.cboHoursPerDay = cboHoursPerDay;
     }
     

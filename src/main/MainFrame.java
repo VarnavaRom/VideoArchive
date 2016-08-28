@@ -223,6 +223,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTextField1.setText("1");
         jTextField1.setMinimumSize(new java.awt.Dimension(75, 27));
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
 
         jLabel5.setText("Средний размер кадра");
 
@@ -232,13 +237,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel7.setText("Частота кадров для каждой камеры:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
 
         jLabel8.setText("кадр/сек");
 
         jLabel9.setText("Время работы камеры:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("часов в день ");
 
@@ -524,6 +534,16 @@ public class MainFrame extends javax.swing.JFrame {
         format.setquality(1); 
         jTextField2.setText(Float.toString(format.getSize())); 
     }//GEN-LAST:event_jRadioButton14ActionPerformed
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+        // TODO add your handling code here:
+        format.setNumCams(Integer.parseInt(jTextField1.getText().toString()));
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        format.setCboHoursPerDay(jComboBox2.getSelectedIndex()+1);
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
