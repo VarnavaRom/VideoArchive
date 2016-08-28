@@ -34,8 +34,9 @@ public class VideoFormat{
     private int cboHoursPerDay;
     
     //Пропускная способность 1 камеры
-    private Object camBandwidth;
-            
+    private String camBandwidth;
+    
+    
     //Обновляем значение compressionFormat
     public void setCompressionFormat(String compressionFormat)
     {
@@ -194,11 +195,12 @@ public class VideoFormat{
     if(tCam > 999)
         camBandwidth = tCam / 1000 + " Мб/с";
     else
-        camBandwidth = tCam + " Кб/с";            
+        camBandwidth = tCam + " Кб/с";   
 }
     //Возврощаем значение пропускной способности камеры
-    public Object getBandwidth(){
-        return camBandwidth.toString().format("%.1f\n", camBandwidth);
+    public String getBandwidth(){
+        calcBandwidth();
+        return camBandwidth;
     }
 
 }

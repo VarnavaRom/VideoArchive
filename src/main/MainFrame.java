@@ -34,6 +34,10 @@ public class MainFrame extends javax.swing.JFrame {
         format.setCompressionFormat("H.264");
         format.setScreenResolution(4); 
         format.setquality(3);
+        format.setCboHoursPerDay(1);
+        format.setNumCams(1);
+        jTextField2.setText(Float.toString(format.getSize()));
+        jTextField5.setText(format.getBandwidth().toString());
     }
 
     /**
@@ -538,11 +542,13 @@ public class MainFrame extends javax.swing.JFrame {
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
         // TODO add your handling code here:
         format.setNumCams(Integer.parseInt(jTextField1.getText().toString()));
+        jTextField5.setText(format.getBandwidth().toString()); 
     }//GEN-LAST:event_jTextField1KeyPressed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
         format.setCboHoursPerDay(jComboBox2.getSelectedIndex()+1);
+        jTextField2.setText(Float.toString(format.getSize()));
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
