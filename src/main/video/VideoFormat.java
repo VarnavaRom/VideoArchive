@@ -33,6 +33,12 @@ public class VideoFormat{
       this.compressionFormat = compressionFormat;  
     }
     
+    //Обновляем значение ScreenResolution
+    public void setScreenResolution(int ScreenResolution)
+    {
+      this.ScreenResolution = ScreenResolution;  
+    }
+    
   private void imageSize(){
     switch(ScreenResolution){
         case 1:
