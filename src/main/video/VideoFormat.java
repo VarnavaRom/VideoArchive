@@ -14,11 +14,11 @@ import javax.swing.JRadioButton;
 public class VideoFormat{
    
     /**Переменная для хранения формата*/
-    public String compressionFormat = "";  
+    private String compressionFormat = "";  
     /**Разрешение экрана*/
-    public int ScreenResolution = 0;
+    private int ScreenResolution = 0;
     /**Качество видео*/
-    public int quality = 0;//0-low,1-medium,2-high
+    private int quality = 0;//0-low,1-medium,2-high
     
     /**Средний размер кадра индивидуален и рассчитывается под влиянием других 
     параметров*/

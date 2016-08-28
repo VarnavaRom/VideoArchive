@@ -93,7 +93,6 @@ public class MianFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
-        jRadioButton1.setText("H.264");
         jRadioButton1.setToolTipText("");
         jRadioButton1.setName("H264"); // NOI18N
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +103,7 @@ public class MianFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("MPEG-4");
+        jRadioButton2.setName("MPEG4"); // NOI18N
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -112,6 +112,7 @@ public class MianFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("MPEG-2");
+        jRadioButton3.setName("MPEG2"); // NOI18N
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton3ActionPerformed(evt);
@@ -120,6 +121,7 @@ public class MianFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setText("MJPEG");
+        jRadioButton4.setName("MJPEG"); // NOI18N
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton4ActionPerformed(evt);
@@ -438,71 +440,67 @@ public class MianFrame extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
-
+        format.setCompressionFormat("H.264");
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
-
+        format.setCompressionFormat("MPEG-4");
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
-
+        format.setCompressionFormat("MPEG-2");
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
-
+        format.setCompressionFormat("MJPEG");
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(1);
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(2); 
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(7);
     }//GEN-LAST:event_jRadioButton7ActionPerformed
 
     private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(3); 
     }//GEN-LAST:event_jRadioButton8ActionPerformed
 
     private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(4); 
     }//GEN-LAST:event_jRadioButton9ActionPerformed
 
     private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(5);
     }//GEN-LAST:event_jRadioButton10ActionPerformed
 
     private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setScreenResolution(6); 
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setquality(3); 
     }//GEN-LAST:event_jRadioButton12ActionPerformed
 
     private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText(Float.toString(getAverageFrameSize())); 
+        format.setquality(1);
     }//GEN-LAST:event_jRadioButton13ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
@@ -510,40 +508,6 @@ public class MianFrame extends javax.swing.JFrame {
         jTextField2.setText(Float.toString(getAverageFrameSize())); 
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
-    //Определяем что выбрали
-    public float getAverageFrameSize(){
-          if(jRadioButton1.isSelected())
-           format.compressionFormat = "H.264";   
-          if(jRadioButton2.isSelected())
-           format.compressionFormat = "MPEG-2";
-          if(jRadioButton3.isSelected())
-           format.compressionFormat = "MPEG-4";
-          if(jRadioButton4.isSelected())
-           format.compressionFormat = "MJPEG";
-          if(jRadioButton5.isSelected())
-           format.ScreenResolution = 1;   
-          if(jRadioButton6.isSelected())
-           format.ScreenResolution = 2;
-          if(jRadioButton7.isSelected())
-           format.ScreenResolution = 7;
-          if(jRadioButton8.isSelected())
-           format.ScreenResolution = 3;
-          if(jRadioButton9.isSelected())
-           format.ScreenResolution = 4;   
-          if(jRadioButton10.isSelected())
-           format.ScreenResolution = 5;
-          if(jRadioButton11.isSelected())
-           format.ScreenResolution = 6;
-          if(jRadioButton12.isSelected())
-           format.quality = 3;   
-          if(jRadioButton13.isSelected())
-           format.quality = 2;
-          if(jRadioButton14.isSelected())
-           format.quality = 1;
-          return format.getSize();
-    }
-    
-    
     /**
      * @param args the command line arguments
      */
