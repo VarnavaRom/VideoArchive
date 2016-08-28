@@ -39,6 +39,12 @@ public class VideoFormat{
       this.ScreenResolution = ScreenResolution;  
     }
     
+    //Обновляем значение ScreenResolution
+    public void setquality(int quality)
+    {
+      this.quality = quality;  
+    }
+    
   private void imageSize(){
     switch(ScreenResolution){
         case 1:
