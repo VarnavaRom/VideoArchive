@@ -27,6 +27,12 @@ public class VideoFormat{
     /**Необходимая пропускная способность для 1 камеры*/
     private String requiredSingleBandwidth = "";
     
+    //Количество камер
+    private int numCams;
+    
+    //Время работы камер
+    private int cboHoursPerDay;
+            
     //Обновляем значение compressionFormat
     public void setCompressionFormat(String compressionFormat)
     {
@@ -166,4 +172,13 @@ public class VideoFormat{
         return this.averageFrameSize;
     }    
     
+    //Изменяем значение numCams
+    private void setNumCams(int numCams){
+        this.numCams = numCams;
+    }
+    
+    //Изменяем значение cboHoursPerDay
+    private void setCboHoursPerDay(int cboHoursPerDay){
+        this.cboHoursPerDay = cboHoursPerDay;
+    }
 }
