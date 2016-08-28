@@ -95,6 +95,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
+        jRadioButton1.setText("H.264");
         jRadioButton1.setToolTipText("");
         jRadioButton1.setName("H264"); // NOI18N
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
