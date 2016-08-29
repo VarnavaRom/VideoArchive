@@ -34,6 +34,13 @@ public class VideoFormat{
                         "кб/c"
 			};
     
+    public VideoFormat(){
+       compressionFormat = "H.264";
+       ScreenResolution = 4;
+       quality = 3;
+       cboHoursPerDay = 1;
+       imageSize();       
+    } 
     
     //Обновляем значение compressionFormat
     public void setCompressionFormat(String compressionFormat)

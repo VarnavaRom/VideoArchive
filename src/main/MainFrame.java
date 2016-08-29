@@ -31,10 +31,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
         initComponents();
         calculator = new Calculator();
-        format.setCompressionFormat("H.264");
-        format.setScreenResolution(4); 
-        format.setquality(3);
-        format.setCboHoursPerDay(1);
         jTextField2.setText(Float.toString(format.getSize()));
         jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
     }
