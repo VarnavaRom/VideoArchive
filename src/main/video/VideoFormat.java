@@ -204,7 +204,7 @@ public class VideoFormat{
     //Возврощаем значение пропускной способности камеры
     public String[] getBandwidth(){
         calcBandwidth();
-        camBandwidth[0].format("%.2f\n", Float.parseFloat(camBandwidth[0]));
+        //camBandwidth[0].format("%.2f\n", Float.parseFloat(camBandwidth[0]));
         return camBandwidth;
     }
 

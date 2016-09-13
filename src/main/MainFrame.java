@@ -32,7 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         calculator = new Calculator();
         jTextField2.setText(Float.toString(format.getSize()));
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }
 
     /**
@@ -87,16 +87,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VideoArchive");
-        setAlwaysOnTop(true);
-        setAutoRequestFocus(false);
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("H.264");
-        jRadioButton1.setToolTipText("");
-        jRadioButton1.setName("H264"); // NOI18N
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -105,7 +100,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("MPEG-4");
-        jRadioButton2.setName("MPEG4"); // NOI18N
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -114,7 +108,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("MPEG-2");
-        jRadioButton3.setName("MPEG2"); // NOI18N
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton3ActionPerformed(evt);
@@ -123,7 +116,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setText("MJPEG");
-        jRadioButton4.setName("MJPEG"); // NOI18N
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton4ActionPerformed(evt);
@@ -232,17 +224,17 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel7.setText("Частота кадров для каждой камеры:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("кадр/сек");
 
         jLabel9.setText("Время работы камеры:");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
 
         jLabel10.setText("часов в день ");
 
@@ -292,13 +284,13 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jRadioButton9))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton8)
-                                    .addComponent(jRadioButton7))
+                                .addComponent(jRadioButton7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton10))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jRadioButton8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton10)
-                                    .addComponent(jRadioButton11)))))
+                                .addComponent(jRadioButton11))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel3)
@@ -321,12 +313,12 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jLabel6))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
                                     .addComponent(jLabel9))
@@ -334,6 +326,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8)
@@ -352,7 +345,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton1)))))
-                .addGap(16, 16, 16))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -428,7 +421,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -449,105 +442,105 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         format.setCompressionFormat("H.264");
         jTextField2.setText(Float.toString(format.getSize()));
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
         format.setCompressionFormat("MPEG-4");
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
         format.setCompressionFormat("MPEG-2");
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
         format.setCompressionFormat("MJPEG");
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(1);
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(2); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(7);
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton7ActionPerformed
 
     private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(3); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton8ActionPerformed
 
     private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(4); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton9ActionPerformed
 
     private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(5);
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton10ActionPerformed
 
     private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
         // TODO add your handling code here:
         format.setScreenResolution(6); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
         // TODO add your handling code here:
         format.setquality(3); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton12ActionPerformed
 
     private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
         // TODO add your handling code here:
         format.setquality(2);
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton13ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
         // TODO add your handling code here:
         format.setquality(1); 
         jTextField2.setText(Float.toString(format.getSize())); 
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        format.setCboHoursPerDay(jComboBox2.getSelectedIndex()+1);
-        jTextField5.setText(format.getBandwidth()[0].toString() + " " + format.getBandwidth()[1].toString());
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+        format.setCboHoursPerDay(jComboBox1.getSelectedIndex()+1);
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
