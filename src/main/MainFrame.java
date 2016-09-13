@@ -23,12 +23,6 @@ public class MainFrame extends javax.swing.JFrame {
      * Creates new form MianFrame
      */
     public MainFrame() {
-        for(int i=0;i<30;i++){
-            cadrInSecond[i]=""+(i+1);
-        }
-        for(int i=0;i<24;i++){
-            hours[i]=""+(i+1);
-        }
         initComponents();
         calculator = new Calculator();
         jTextField2.setText(Float.toString(format.getSize()));
@@ -253,11 +247,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel14.setText("Необходимый объем памяти жесткого диска:");
 
         jButton1.setText("Итог");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -426,17 +415,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        try {
-            calculator.calc(new VideoFormat() {
-            });
-        }catch(CalculatedArgumentException exception){
-        
-        }
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
