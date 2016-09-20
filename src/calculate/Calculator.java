@@ -28,13 +28,25 @@ public class Calculator {
         this.countCamera = countCamera;
     }*/
     
-    int hours;
-    int days;
+    private static final int frt = 1;
+    private static final String pattern = "##0.00";
     
-    public String calc(VideoFormat videoFormat) throws CalculatedArgumentException{
+    public String ReturnCalc(int cboHoursPerDay, int frameRate, double size, int numCams, double desiredStorage){
     
-        return "";
+    String storage;
+    String typeStorate;
+    
+    double eStorage = ((((size * (frameRate/ frt) * numCams * 60 * 60 * 24 * desiredStorage) / 1000000) / 24) * cboHoursPerDay) * 3;
+
+    if(eStorage > 999)
+    {
+        storage = conversion(eStorage / 1000);
+        typeStorate = " ТБ";
     }
-    
-    
-}
+    else
+    {
+        storage = conversion(eStorage);
+        typeStorate = " ГБ";
+    } 
+        return storage + typeStorate;
+    }
