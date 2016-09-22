@@ -50,3 +50,38 @@ public class Calculator {
     } 
         return storage + typeStorate;
     }
+    
+   public String calcCamera(int frameRate, double size, int numCams, double desiredStorage){ 
+       
+       String tBandType;
+       double tBand = (size * 12 * frameRate / frt * numCams);
+       
+    if(tBand > 999999)
+    {
+        tBand = (tBand / 1000000);
+        tBandType = " Гб/с";
+    }
+    else if(tBand > 999)
+    {
+        tBand = (tBand / 1000);
+        tBandType = " Мб/с";
+    }
+    else
+    {
+        tBandType = " Кб/с";
+    }
+                
+
+    return conversion(tBand) + tBandType;
+   }
+    
+   
+   //Обрезаем число чтоб получить два знака после запятой
+    private String conversion(x) 
+    { 
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
+        String str = decimalFormat.format(x);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        return str;
+    }
+}
