@@ -77,11 +77,11 @@ public class Calculator {
     
    
    //Обрезаем число чтоб получить два знака после запятой
-    private String conversion(x) 
+    private String conversion(double x) 
     { 
         DecimalFormat decimalFormat = new DecimalFormat(pattern);
         String str = decimalFormat.format(x);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        
         return str;
     }
 }
