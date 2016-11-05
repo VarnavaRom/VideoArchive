@@ -421,6 +421,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setCompressionFormat("H.264");
         jTextField2.setText(Float.toString(format.getSize()));
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
@@ -428,6 +429,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setCompressionFormat("MPEG-4");
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
@@ -435,6 +437,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setCompressionFormat("MPEG-2");
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
@@ -442,6 +445,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setCompressionFormat("MJPEG");
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
@@ -449,6 +453,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(1);
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
@@ -456,6 +461,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(2); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton6ActionPerformed
 
     private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
@@ -463,6 +469,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(7);
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton7ActionPerformed
 
     private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
@@ -470,6 +477,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(3); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton8ActionPerformed
 
     private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
@@ -477,6 +485,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(4); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton9ActionPerformed
 
     private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
@@ -484,6 +493,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(5);
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton10ActionPerformed
 
     private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
@@ -491,6 +501,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setScreenResolution(6); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
@@ -498,6 +509,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setquality(3); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton12ActionPerformed
 
     private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
@@ -505,6 +517,7 @@ public class MainFrame extends javax.swing.JFrame {
         format.setquality(2);
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton13ActionPerformed
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
@@ -512,14 +525,25 @@ public class MainFrame extends javax.swing.JFrame {
         format.setquality(1); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jRadioButton14ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
         format.setCboHoursPerDay(jComboBox1.getSelectedIndex()+1);
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+        //Обновляем данные в полях формы
+    private void formUpdate()
+    {
+        //Рассчитываем пропускную способность для всех камер
+        jTextField4.setText(calculator.calcCamera(jComboBox1.getSelectedIndex()+1,Double.parseDouble(jTextField2.getText()),Integer.parseInt(jTextField1.getText()), Double.parseDouble(jTextField3.getText())));
+        //Рассчитываем необходимый обьем памяти
+        jTextField6.setText(calculator.ReturnCalc(jComboBox2.getSelectedIndex()+1, jComboBox1.getSelectedIndex()+1,Double.parseDouble(jTextField2.getText()),Integer.parseInt(jTextField1.getText()), Double.parseDouble(jTextField3.getText())));
+    }
+    
     /**
      * @param args the command line arguments
      */
