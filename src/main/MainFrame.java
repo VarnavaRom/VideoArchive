@@ -419,6 +419,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
         format.setCompressionFormat("H.264");
+        System.out.print(Float.toString(format.getSize()));
         jTextField2.setText(Float.toString(format.getSize()));
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
