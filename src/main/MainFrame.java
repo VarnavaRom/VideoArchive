@@ -13,13 +13,18 @@ import main.video.VideoFormat;
  */
 public class MainFrame extends javax.swing.JFrame {
     
+    String[] cadrInSecond = new String[30];
+    String[] hours = new String[24];
     Calculator calculator;
+    VideoFormat format = new VideoFormat();
     /**
      * Creates new form MianFrame
      */
     public MainFrame() {
         initComponents();
         calculator = new Calculator();
+        jTextField2.setText(Float.toString(format.getSize()));
+        jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
     }
 
     /**
