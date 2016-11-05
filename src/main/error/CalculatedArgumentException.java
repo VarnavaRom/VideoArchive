@@ -11,5 +11,5 @@ package main.error;
  * Класс служит для возврата ошибок возникших в ходе подсчета
  */
 public class CalculatedArgumentException extends Exception {
-    
+    //bit test comment
 }
