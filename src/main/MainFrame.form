@@ -375,6 +375,9 @@
           <Dimension value="[75, 27]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField1KeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -432,6 +435,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -450,6 +456,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField3KeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
