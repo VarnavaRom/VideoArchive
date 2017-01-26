@@ -511,7 +511,7 @@ private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
         // TODO add your handling code here:
-        format.setquality(3); 
+        format.setQuality(3); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
         formUpdate();
@@ -519,7 +519,7 @@ private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
         // TODO add your handling code here:
-        format.setquality(2);
+        format.setQuality(2);
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
         formUpdate();
@@ -527,7 +527,7 @@ private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
         // TODO add your handling code here:
-        format.setquality(1); 
+        format.setQuality(1); 
         jTextField2.setText(Float.toString(format.getSize())); 
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
         formUpdate();
