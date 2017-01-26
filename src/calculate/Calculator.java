@@ -1,11 +1,17 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package calculate;
 
 import java.text.DecimalFormat;
+import main.video.VideoFormat;
 
 /**
  *
  * @author ivan
- * Class-calculator, it is all counts
+ * Класс-калькулятор, на нем лежит все подсчеты
  */
 public class Calculator {
     
@@ -21,15 +27,15 @@ public class Calculator {
         this.countCamera = countCamera;
     }*/
     
-    private static final int FRT = 1;
-    private static final String PATTERN = "##0.00";
+    private static final int frt = 1;
+    private static final String pattern = "##0.00";
     
     public String ReturnCalc(int cboHoursPerDay, int frameRate, double size, int numCams, double desiredStorage){
     
     String storage;
     String typeStorate;
     
-    double eStorage = ((((size * (frameRate/ FRT) * numCams * 60 * 60 * 24 * desiredStorage) / 1000000) / 24) * cboHoursPerDay) * 3;
+    double eStorage = ((((size * (frameRate/ frt) * numCams * 60 * 60 * 24 * desiredStorage) / 1000000) / 24) * cboHoursPerDay) * 3;
 
     if(eStorage > 999)
     {
@@ -47,7 +53,7 @@ public class Calculator {
    public String calcCamera(int frameRate, double size, int numCams, double desiredStorage){ 
        
        String tBandType;
-       double tBand = (size * 12 * frameRate / FRT * numCams);
+       double tBand = (size * 12 * frameRate / frt * numCams);
        
     if(tBand > 999999)
     {
@@ -72,7 +78,7 @@ public class Calculator {
    //Обрезаем число чтоб получить два знака после запятой
     private String conversion(double x) 
     { 
-        DecimalFormat decimalFormat = new DecimalFormat(PATTERN);
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
         String str = decimalFormat.format(x);
         
         return str;

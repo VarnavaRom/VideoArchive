@@ -5,12 +5,16 @@
  */
 package main.video;
 
+import java.text.DecimalFormat;
+
 /**
  *  Класс представляет собой воплощение видеоформата
  * @author ivan
  */
 public class VideoFormat{
    
+    private static final String pattern = "##0.00";
+    
     /**Переменная для хранения формата*/
     private String compressionFormat = "";  
     /**Разрешение экрана*/
@@ -21,10 +25,7 @@ public class VideoFormat{
     /**Средний размер кадра индивидуален и рассчитывается под влиянием других 
     параметров*/
     private float averageFrameSize;
-    
-    /**Необходимая пропускная способность для 1 камеры*/
-    private String requiredSingleBandwidth = "";
-    
+   
     //Время работы камер
     private int cboHoursPerDay;
     
@@ -193,19 +194,27 @@ public class VideoFormat{
 
     float tCam = averageFrameSize * 12 * cboHoursPerDay / frt;
     if(tCam > 999){
-        camBandwidth[0] = Float.toString(tCam / 1000);
-        camBandwidth[1] = "Мб/с";
+        this.camBandwidth[0] = conversion(tCam / 1000);
+        this.camBandwidth[1] = "Мб/с";
     }
     else{
-        camBandwidth[0] = Float.toString(tCam);
-        camBandwidth[1] = "Кб/с";
+        this.camBandwidth[0] = conversion(tCam);
+        this.camBandwidth[1] = "Кб/с";
     }
 }
     //Возврощаем значение пропускной способности камеры
     public String[] getBandwidth(){
         calcBandwidth();
-        //camBandwidth[0].format("%.2f\n", Float.parseFloat(camBandwidth[0]));
-        return camBandwidth;
+        return this.camBandwidth;
+    }
+    
+    //Обрезаем число чтоб получить два знака после запятой
+    private String conversion(float x) 
+    { 
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
+        String str = decimalFormat.format(x);
+        
+        return str;
     }
 
 }
