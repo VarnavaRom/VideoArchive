@@ -56,7 +56,7 @@ public class VideoFormat{
     }
     
     //Обновляем значение ScreenResolution
-    public void setquality(int quality)
+    public void setQuality(int quality)
     {
       this.quality = quality;  
     }
