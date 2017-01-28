@@ -18,6 +18,7 @@ public class MainFrame extends javax.swing.JFrame {
         calculator = new Calculator();
         jTextField2.setText(Float.toString(format.getSize()));
         jTextField5.setText(format.getBandwidth()[0] + " " + format.getBandwidth()[1]);
+        formUpdate();
     }
 
     @SuppressWarnings("unchecked")
