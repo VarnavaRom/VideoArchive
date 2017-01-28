@@ -15,21 +15,10 @@ import main.video.VideoFormat;
  */
 public class Calculator {
     
-   /* protected int countCamera;
-
-   
-    public int getCountCamera() {
-        return countCamera;
-    }
-
-  
-    public void setCountCamera(int countCamera) {
-        this.countCamera = countCamera;
-    }*/
-    
     private static final int frt = 1;
     private static final String pattern = "##0.00";
     
+    //Рассчитываем необходимый обьем памяти для одной камеры
     public String ReturnCalc(int cboHoursPerDay, int frameRate, double size, int numCams, double desiredStorage){
     
     String storage;
@@ -49,7 +38,8 @@ public class Calculator {
     } 
         return storage + typeStorate;
     }
-    
+   
+   //Рассчитываем необходимый обьем памяти для всех камер
    public String calcCamera(int frameRate, double size, int numCams, double desiredStorage){ 
        
        String tBandType;
